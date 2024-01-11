@@ -1,6 +1,8 @@
+import RootSidebar from "@/components/RootSidebar";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 export const fontSans = FontSans({
@@ -22,11 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          " h-full bg-background font-sans antialiased ",
           fontSans.variable,
         )}
       >
-        {children}
+        <main className="min-h-screen">{children}</main>
       </body>
     </html>
   );
